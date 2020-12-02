@@ -20,7 +20,7 @@ void SayHello() {
 	*/
 }
 
-void main(int argc, char** argv) {
+void mainbreak(int argc, char** argv) {
 	SayHello();
 	//changes more
 }
