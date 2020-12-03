@@ -144,6 +144,7 @@
     <ClCompile Include="CeasarCipherMethods.c" />
     <ClCompile Include="CeasarCipherTests.c" />
     <ClCompile Include="BasicIOutInC.c" />
+    <ClCompile Include="Main.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="alphabetcasesconsts.h" />

@@ -2,11 +2,6 @@
 #include <stdio.h>
 
 //void TakeHelloName();
-
-
-void SayHello() {
-
-	printf("hello\n");
 	/*
 	%c character
 	%d interger number (base10)
@@ -20,6 +15,13 @@ void SayHello() {
 	%% print a percent sign
 	\% print a percent sign
 	*/
+void SayHello();
+
+
+void SayHello() {
+
+	printf("hello\n");
+
 }
 
 void mainbasicinout(int argc, char** argv) {

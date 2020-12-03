@@ -42,7 +42,7 @@ void decryptCipherMethod(char toCipher[], int offset) {
 	printf("\n");
 }
 void encryptCipherMethod(char toCipher[], int offset) {
-	char newEncrytpedString[255] = "";
+	char newEncrytpedString[255];
 	int i;
 
 	if (offset >= 1 && offset <= 26) {
