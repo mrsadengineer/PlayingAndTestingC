@@ -1,5 +1,7 @@
+#pragma once
 #include <stdio.h>
 
+//void TakeHelloName();
 
 
 void SayHello() {
@@ -20,7 +22,7 @@ void SayHello() {
 	*/
 }
 
-void mainbreak(int argc, char** argv) {
+void mainbasicinout(int argc, char** argv) {
 	SayHello();
 	//changes more
 }

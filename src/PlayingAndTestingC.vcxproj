@@ -140,7 +140,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CeasarCipher.c" />
-    <ClCompile Include="Main.c" />
+    <ClCompile Include="CeasarCipherFunction.c" />
+    <ClCompile Include="CeasarCipherMethods.c" />
+    <ClCompile Include="CeasarCipherTests.c" />
+    <ClCompile Include="BasicIOutInC.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="alphabetcasesconsts.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

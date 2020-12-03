@@ -1,23 +1,25 @@
-//#include <iostream>
-//#include <string>
+
+#pragma once
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "alphabetcasesconsts.h"
 //check on scanf_s
 //check on using pointers to print
 
 
+char* encryptCipher(char[], int);
+char* decryptCipher(char[], int);
 
-const int CAPTIAL_A = 65;
-const int CAPITAL_Z = 90;
+//const int CAPTIAL_A = 65;
+//const int CAPITAL_Z = 90;
+//
+//const int LOWERCASE_A = 97;
+//const int LOWERCASE_Z = 122;
 
-const int LOWERCASE_A = 97;
-const int LOWERCASE_Z = 122;
 
 
-void decryptCipher(char toCipher[], int offset) {
-	char newEncrytpedString[255];
-
+char* decryptCipher(char toCipher[], int offset) {
+	char newEncrytpedString[255]="";
 	int i;
 	if (offset >= 1 && offset <= 26) {
 
@@ -42,22 +44,18 @@ void decryptCipher(char toCipher[], int offset) {
 				}
 			}
 			//newEncrytpedString.append(1, (char)letter);
-			newEncrytpedString[i], (char)letter;
+			newEncrytpedString[i] = (char)letter;
 		}
 	}
 	else {
-		printf( "the offset is out of bound" );
+		printf( "error: the offset is out of bound" );
 	}
 
-	printf("your encrypted string is as follow: \n");
+	printf("your decrypted string is as follow: \n");
 	printf("%s",newEncrytpedString );
-
-
+	printf("\n");
 }
-
-
-
-void encryptCipher(char toCipher[], int offset) {
+char* encryptCipher(char toCipher[], int offset) {
 	char newEncrytpedString[255] = "";
 	int i;
 
@@ -91,66 +89,84 @@ void encryptCipher(char toCipher[], int offset) {
 		}
 	}
 	else {
-		printf("the offset is out of bound" );
+		printf("error: the offset is out of bound" );
 	}
-
-
-	printf("your encrypted string is as follow: \n");
-
+	//printf("your encrypted string is as follow: \n");
 	//potentiall return new encryption string
-	printf("%s", newEncrytpedString );
+	//printf("%s", newEncrytpedString );
 
-
+	return newEncrytpedString;
 }
 
 
-void processCipher() {
-	int offset;
-	char stringtoencrypt[255];
-
-	printf("lets cipher something\n");
-	printf("give the number of offset. (1-26)\n");
-
-	scanf_s("%d", &offset);
-	
-
-	printf("\n off is %d\n", offset);
-	printf("\n what do you want to encrypt\n");
-
-	scanf_s("%s", &stringtoencrypt);
-	//std::getline(std::cin, stringtoencrypt);
-	//std::getline(std::cin, stringtoencrypt);
-
-	encryptCipher(stringtoencrypt, offset);
 
 
-	printf( stringtoencrypt );
 
-}
-void processDecipher() {
-
-	int offset;
-	char stringToDecrypt[255];
-
-	printf("lets decipher something\n");
-	printf("give the number of offset. (1-26)\n");
-	//fgets(offset, 255, stdin);
-		scanf_s("%d", &offset);
-	printf("\n what do you want to decrypt\n");
-
-	scanf_s("%s", &stringToDecrypt);
-	//std::getline(std::cin, stringToDecrypt);
-	//std::getline(std::cin, stringToDecrypt);
-
-	decryptCipher(stringToDecrypt, offset);
-
-
-	printf(stringToDecrypt);
-
-}
 
 void main(int argc, char** argv) {
 
-	printf("hello ceasar");
-	//please select to decrypt or encrypt 
+	maintest();
+	//test();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//void processDecipher(char decryptingString[]) {
+//
+//	int offset;
+//	//char stringToDecrypt[255];
+//
+//	printf("lets decipher something\n");
+//	printf("give the number of offset. (1-26)\n");
+//	//fgets(offset, 255, stdin);
+//		scanf_s("%d", &offset);
+//	printf("\n what do you want to decrypt\n");
+//
+//	//scanf_s("%s", &stringToDecrypt);
+//	//std::getline(std::cin, stringToDecrypt);
+//	//std::getline(std::cin, stringToDecrypt);
+//
+//	decryptCipher(decryptingString, offset);
+//
+//	printf("\n");
+//
+//	printf(decryptingString);
+//	printf("\n");
+//}
+
+
+//void processCipher(char encryptingString[]) {
+//	int offset;
+//	//char stringtoencrypt[255];
+//
+//	printf("begin encrypting process\n");
+//	printf("give the number of offset for cypher. (1-26)\n");
+//	scanf_s("%d", &offset);
+//
+//
+//	printf("\nceasar-cypher is %d\n", offset);
+//
+//
+//	//printf("\nwhat do you want to encrypt\n");
+//	//scanf_s("%s", &encryptingString);
+//	//scanf_s("%s", &stringtoencrypt);
+//	//std::getline(std::cin, stringtoencrypt);
+//	//std::getline(std::cin, stringtoencrypt);
+//
+//	encryptCipher(encryptingString, offset);
+//
+//
+//	printf(encryptingString);
+//	return encryptCipher;
+//
+//}

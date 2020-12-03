@@ -15,11 +15,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CeasarCipher.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CeasarCipherTests.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CeasarCipherFunction.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CeasarCipherMethods.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicIOutInC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="alphabetcasesconsts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
